@@ -15,12 +15,14 @@ namespace WikiCarsInfo.Controllers
         private FeedBackContext db = new FeedBackContext();
 
         // GET: FeedBacks
+        [Route("index")]
         public ActionResult Index()
         {
             return View(db.FeedBacks.ToList());
         }
 
         // GET: FeedBacks/Details/5
+        [Route("details")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,6 +38,7 @@ namespace WikiCarsInfo.Controllers
         }
 
         // GET: FeedBacks/Create
+        [Route("create")]
         public ActionResult Create()
         {
             return View();
@@ -59,6 +62,7 @@ namespace WikiCarsInfo.Controllers
         }
 
         // GET: FeedBacks/Edit/5
+        [Route("edit")]
         public ActionResult Edit(int? id)
         {
             if (id == null)

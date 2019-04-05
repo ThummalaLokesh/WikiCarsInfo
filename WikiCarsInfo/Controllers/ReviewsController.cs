@@ -15,10 +15,13 @@ namespace WikiCarsInfo.Controllers
         private ReviewContext db = new ReviewContext();
 
         // GET: Reviews
+        [Route("index")]
         public ActionResult Index()
         {
             return View(db.Reviews.ToList());
         }
+
+        [Route("bmw7")]
         public ActionResult BMW7()
         {
             return View();
@@ -36,6 +39,8 @@ namespace WikiCarsInfo.Controllers
 
             return View(review);
         }
+
+        [Route("bmw520")]
         public ActionResult BMW520()
         {
             return View();
@@ -53,6 +58,9 @@ namespace WikiCarsInfo.Controllers
 
             return View(review);
         }
+
+
+        [Route("bmwi8")]
         public ActionResult BMWi8()
         {
             return View();
@@ -70,6 +78,8 @@ namespace WikiCarsInfo.Controllers
 
             return View(review);
         }
+
+        [Route("audia8")]
         public ActionResult AUDIA8()
         {
             return View();
@@ -87,6 +97,8 @@ namespace WikiCarsInfo.Controllers
 
             return View(review);
         }
+
+        [Route("audiq8")]
         public ActionResult AUDIQ8()
         {
             return View();
@@ -104,6 +116,8 @@ namespace WikiCarsInfo.Controllers
 
             return View(review);
         }
+
+        [Route("audir8")]
         public ActionResult AUDIR8()
         {
             return View();
@@ -121,6 +135,8 @@ namespace WikiCarsInfo.Controllers
 
             return View(review);
         }
+
+        [Route("mercc")]
         public ActionResult MERCC()
         {
             return View();
@@ -138,6 +154,8 @@ namespace WikiCarsInfo.Controllers
 
             return View(review);
         }
+
+        [Route("mercs")]
         public ActionResult MERCS()
         {
             return View();
@@ -155,6 +173,8 @@ namespace WikiCarsInfo.Controllers
 
             return View(review);
         }
+
+        [Route("mercsls")]
         public ActionResult MERCSLS()
         {
             return View();
