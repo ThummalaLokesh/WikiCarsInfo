@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "BMW";
+}
+<div>
+    <!--  <div class="numbertext">1 / 5</div> -->
+    <img src="~/Resources/bmwhome.jpg" style="width:100%">
+    <div class="text" id="text1">Welcome To BMW Cars</div>
+</div>
+
+<div class="latestcars">
+    <h1 class="text-center">&bullet; SELECT A MODEL &bullet;</h1>
+</div>
+<div class="grid">
+    <div class="row">
+        <div class="col-xs-9 col-sm-4 col-md-4 col-lg-4">
+            <div class="txthover">
+                <img src="~/Resources/bmw7_bmwpage.jpg" alt="car1">
+                <div class="txtcontent">
+                    <div class="stars">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                    <div class="simpletxt">
+                        <h3 class="name">BMW 7 SERIES</h3>
+                        <p>
+                            Master every performance, enjoy every moment. The BMW 7 Series Sedan stands for self-assured presence, exceptional performance and maximum comfort.
+                        </p>
+                        <h4 class="price"> $96,950</h4>
+                        <button class="dropbtn1"> @Html.ActionLink("SELECT THIS CAR", "BMW7", "Reviews")</button>
+
+                    </div>
+                    <div class="stars2">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-9 col-sm-4 col-md-4 col-lg-4">
+            <div class="txthover">
+                <img src="~/Resources/bmw520_bmwpage.jpg" alt="car1">
+                <div class="txtcontent">
+                    <div class="stars">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                    <div class="simpletxt">
+                        <h3 class="name">BMW 5 SERIES</h3>
+                        <p>
+                            The BMW 5 Series is the embodiment of the modern business sedan. Thanks to its dynamic and simultaneously elegant appearance.
+                        </p>
+                        <h4 class="price"> $84,000</h4>
+                        <button class="dropbtn1"> @Html.ActionLink("SELECT THIS CAR", "BMW520", "Reviews")</button>
+
+                    </div>
+                    <div class="stars2">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-9 col-sm-4 col-md-4 col-lg-4">
+            <div class="txthover">
+                <img src="~/Resources/bmwi8_bmwpage.jpg" alt="car1">
+
+                <div class="txtcontent">
+                    <div class="stars">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                    <div class="simpletxt">
+                        <h3 class="name">BMW i8</h3>
+                        <p>
+                            The i8 is the first high-performance sports car with the economy of a compact vehicle – and with its wind-cheating lines, it looks fast sitting still.
+                        </p>
+                        <h4 class="price"> $169,900</h4>
+                        <button class="dropbtn1"> @Html.ActionLink("SELECT THIS CAR", "BMWi8", "Reviews")</button>
+
+                    </div>
+                    <div class="stars2">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

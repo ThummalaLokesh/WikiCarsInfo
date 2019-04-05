@@ -1,0 +1,168 @@
+﻿@{
+    ViewBag.Title = "MERCC";
+}
+<div>
+    <!--  <div class="numbertext">1 / 5</div> -->
+    <img src="~/Resources/mercc_fullhome.jpg" style="width:100%">
+    <div class="text" id="text1">MERC C CLASS</div>
+</div>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+    <!-- About Container -->
+    <div class="w3-container" id="about">
+        <div class="w3-content" style="max-width:700px">
+            <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE MERC C CLASS</span></h5>
+            <p id="justify">The C-Class wraps countless technological advances in even more seductive style for 2019. New lower body styling, wheel choices, and all-LED lighting highlight its athletically elegant shape. Its acclaimed cabin brings new dimensions of enjoyment.</p>
+            <p id="justify">The sensually sculpted cabin is both functional and feature-rich. Advanced innovations harmonize with five options in hand-finished wood trim. A new 12.3-inch digital instrument cluster and 10.25-inch centre screen are available.</p>
+            <div class="w3-panel w3-leftbar w3-light-grey">
+                <p id="justify">
+                    <i>
+                        "If you need me to tell you that if you serve God, you'll get a Mercedes, you're lost."
+                    </i>
+                </p>
+                <p>
+                    Paul Washer
+
+
+
+
+                </p>
+            </div>
+
+            <p><strong>Official Website:</strong> <a href="https://www.mercedes-benz.ca/en/vehicles/class/c-class/sedan">Click Here</a></p>
+
+        </div>
+    </div>
+
+    <!-- Menu Container -->
+    <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width:700px">
+
+            <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Click on Specifications or Features to open</span></h5>
+
+            <div class="w3-row w3-center w3-card w3-padding">
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+                    <div class="w3-col s6 tablink">Specifications</div>
+                </a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+                    <div class="w3-col s6 tablink">Features</div>
+                </a>
+            </div>
+
+            <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+                <h5>Mileage</h5>
+                <p class="w3-text-grey">18.59 kmpl</p><br>
+
+                <h5>Max Power</h5>
+                <p class="w3-text-grey">265bhp@4000rpm</p><br>
+
+                <h5>TransmissionType</h5>
+                <p class="w3-text-grey">Automatic</p><br>
+
+                <h5>Engine Description</h5>
+                <p class="w3-text-grey">3.0-litres 265bhp 24V Diesel Engine</p><br>
+
+                <h5>Cargo Volume</h5>
+                <p class="w3-text-grey">520-litres</p>
+            </div>
+
+            <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+                <h5>Automatic Climate Control</h5>
+                <p class="w3-text-grey">4 Zone</p><br>
+
+                <h5>Steering Column</h5>
+                <p class="w3-text-grey">Electrically Adjustable</p><br>
+
+                <h5>Steering Gear Type</h5>
+                <p class="w3-text-grey">Rack & Pinion</p><br>
+
+                <h5>Turning Radius (wheel base)</h5>
+                <p class="w3-text-grey">5.6 meters</p><br>
+
+                <h5>Gear Box</h5>
+                <p class="w3-text-grey">8 Speed</p>
+            </div>
+
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <!-- End page content -->
+    @model WikiCarsInfo.Models.Review
+
+
+    <div class="container">
+
+        <h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">REVIEW THIS CAR</span></h2>
+
+
+        @using (Ajax.BeginForm("MERCC", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            UpdateTargetId = "MainBody",
+            OnSuccess = "resetForm"
+        }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal" style="padding-left:20%;">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Review_Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Review_Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Review_Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Review_Subject, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Review_Subject, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Review_Subject, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Your_Review, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Your_Review, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Your_Review, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Rating, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Rating, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Rating, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+
+
+    </div>
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+    <br />
+
+    <div class="w3-container" id="about">
+        <div class="w3-content" style="max-width:700px">
+            <p>To see all reviews on cars. Please click on <strong>@Html.ActionLink("ALL REVIEWS", "Index", "Reviews")</strong></p>
+        </div>
+    </div>
+</div>
