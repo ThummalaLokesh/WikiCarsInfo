@@ -1,0 +1,51 @@
+﻿@model WikiCarsInfo.Models.Review
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="container" style="padding-top:7%;">
+    <h2>Details</h2>
+
+    <div>
+        <h4>Review</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Review_Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Review_Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Review_Subject)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Review_Subject)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Your_Review)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Your_Review)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Rating)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Rating)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewId }) |
+        @Html.ActionLink("Back to All Reviews", "Index")
+    </p>
+    </div>

@@ -1,0 +1,161 @@
+﻿@{
+    ViewBag.Title = "AUDIA8";
+}
+<div>
+    <!--  <div class="numbertext">1 / 5</div> -->
+    <img src="~/Resources/audia8_home.jpg" style="width:100%">
+    <div class="text" id="text1">AUDI A8</div>
+</div>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+    <!-- About Container -->
+    <div class="w3-container" id="about">
+        <div class="w3-content" style="max-width:700px">
+            <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE AUDI A8</span></h5>
+            <p id="justify">The interior of the all-new A8 L refines modern luxury. Fine leathers, open pore woods, and detailed aluminum combine with cutting-edge technology to create a completely new experience.</p>
+            <p id="justify">Under the sculpted lines and luxurious interior the new A8 L shines brighter than ever before. Ground-breaking technology ensure your drive is more efficient, safer, and more enjoyable than you ever thought possible.</p>
+            <div class="w3-panel w3-leftbar w3-light-grey">
+                <p id="justify"><i>"I have one car that works; it's fast and safe: an Audi 5. And I have two old cars that never work: an old Peugeot convertible, and an Alfa Romeo Giulia."</i></p>
+                <p>
+                    Daniel Bruhl
+
+                </p>
+            </div>
+
+            <p><strong>Official Website:</strong> <a href="https://www.audi.ca/ca/web/en/models/a8/a8-l.html">Click Here</a></p>
+
+        </div>
+    </div>
+
+    <!-- Menu Container -->
+    <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width:700px">
+
+            <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Click on Specifications or Features to open</span></h5>
+
+            <div class="w3-row w3-center w3-card w3-padding">
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+                    <div class="w3-col s6 tablink">Specifications</div>
+                </a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+                    <div class="w3-col s6 tablink">Features</div>
+                </a>
+            </div>
+
+            <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+                <h5>Mileage</h5>
+                <p class="w3-text-grey">18.59 kmpl</p><br>
+
+                <h5>Max Power</h5>
+                <p class="w3-text-grey">265bhp@4000rpm</p><br>
+
+                <h5>TransmissionType</h5>
+                <p class="w3-text-grey">Automatic</p><br>
+
+                <h5>Engine Description</h5>
+                <p class="w3-text-grey">3.0-litres 265bhp 24V Diesel Engine</p><br>
+
+                <h5>Cargo Volume</h5>
+                <p class="w3-text-grey">520-litres</p>
+            </div>
+
+            <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+                <h5>Automatic Climate Control</h5>
+                <p class="w3-text-grey">4 Zone</p><br>
+
+                <h5>Steering Column</h5>
+                <p class="w3-text-grey">Electrically Adjustable</p><br>
+
+                <h5>Steering Gear Type</h5>
+                <p class="w3-text-grey">Rack & Pinion</p><br>
+
+                <h5>Turning Radius (wheel base)</h5>
+                <p class="w3-text-grey">5.6 meters</p><br>
+
+                <h5>Gear Box</h5>
+                <p class="w3-text-grey">8 Speed</p>
+            </div>
+
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <!-- End page content -->
+    @model WikiCarsInfo.Models.Review
+
+
+    <div class="container">
+
+        <h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">REVIEW THIS CAR</span></h2>
+
+
+        @using (Ajax.BeginForm("AUDIA8", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            UpdateTargetId = "MainBody",
+            OnSuccess = "resetForm"
+        }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal" style="padding-left:20%;">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Review_Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Review_Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Review_Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Review_Subject, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Review_Subject, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Review_Subject, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Your_Review, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Your_Review, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Your_Review, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Rating, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Rating, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Rating, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+
+
+    </div>
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+    <br />
+
+    <div class="w3-container" id="about">
+        <div class="w3-content" style="max-width:700px">
+            <p>To see all reviews on cars. Please click on <strong>@Html.ActionLink("ALL REVIEWS", "Index", "Reviews")</strong></p>
+        </div>
+    </div>
+</div>

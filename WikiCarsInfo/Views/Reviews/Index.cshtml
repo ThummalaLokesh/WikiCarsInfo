@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WikiCarsInfo.Models.Review>
+
+@{
+    ViewBag.Title = "All Reviews";
+}
+<div class="container" style="padding-top:8%;">
+    <h2>All Reviews</h2>
+
+    
+    <div class="w3-panel w3-leftbar w3-light-grey">
+        <p id="justify"><i>"Note: To create a review, please go to the car page you want to review and create a review there.(i.e. goto MAKES -> Select a MAKE -> Select a Model)"</i></p>
+     </div>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Review_Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Review_Subject)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Your_Review)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Rating)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Review_Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Review_Subject)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Your_Review)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Rating)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ReviewId }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ReviewId }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ReviewId })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+    </div>
