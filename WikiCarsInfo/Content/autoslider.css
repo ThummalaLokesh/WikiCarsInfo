@@ -108,7 +108,7 @@ li.dropdown1 {
         text-decoration: none;
         display: block;
         text-align: center;
-        font-family: 'BebasNeue Regular';
+       /* font-family: 'BebasNeue Regular';*/
         font-size: 13pt;
     }
 
