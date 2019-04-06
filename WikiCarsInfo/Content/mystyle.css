@@ -38,7 +38,7 @@ text-decoration: none;
 	list-style-type: none;
 	display: inline-block;
 	letter-spacing: 1px;
-	
+	font-family: 'BebasNeue Regular';
 	font-size: 12.7px;	
 	color: #E7E7E7;
 	margin-bottom: 0px;
@@ -51,7 +51,7 @@ text-decoration: none;
  	list-style-type: none;
  	display: inline-block;
  	
-	
+	font-family: 'BebasNeue Regular';
 	font-size: 9pt;
 	color: #E7E7E7;
 	margin-bottom: 0px;
@@ -135,11 +135,11 @@ padding-left: 5%;
 	height:69px; 
 }
 @font-face {
-  font-family: 'BebasNeue Regular';
+  font-family: "BebasNeue Regular";
     src: url(../fonts/BebasNeue-Regular.otf) format("truetype");
 }
   #navbarontop > li > a {
-  	
+  	font-family: 'BebasNeue Regular';
   	font-size: 17px;
   	color: #313943;
     padding-top: 5px;

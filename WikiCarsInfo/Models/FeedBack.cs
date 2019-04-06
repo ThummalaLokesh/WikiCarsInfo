@@ -19,7 +19,6 @@ namespace WikiCarsInfo.Models
         public virtual String Name { get; set; }
 
         //declaring variable for email
-        [EmailAddress(ErrorMessage = "Invalid Email Address")]
         [Required(ErrorMessage = "You must write your Email")]
         [DisplayName("Email")]
         public virtual String Email { get; set; }

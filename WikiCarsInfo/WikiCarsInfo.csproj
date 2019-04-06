@@ -176,6 +176,7 @@
     <Compile Include="Models\FeedBackContext.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\ReviewContext.cs" />
+    <Compile Include="Models\ReviewContextInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
