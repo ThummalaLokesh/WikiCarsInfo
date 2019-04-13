@@ -15,8 +15,8 @@ namespace WikiCarsInfo.Controllers
         private FeedBackContext db = new FeedBackContext();
 
         // GET: FeedBacks
-        [Route("index")]
-        public ActionResult Index()
+        [Route("details")]
+        public ActionResult Details()
         {
             return View(db.FeedBacks.ToList());
         }

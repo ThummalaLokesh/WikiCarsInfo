@@ -1,0 +1,101 @@
+﻿@{
+    ViewBag.Title = "MERC";
+}
+
+<!--  Welcome to bmw page -->
+<div>
+    <!--  setting a image -->
+    <img src="~/Resources/merc_home.jpg" style="width:100%">
+    <div class="text" id="text1">Welcome To MERCEDES Cars</div>
+</div>
+
+<!--  selecting a car section -->
+<div class="latestcars">
+    <h1 class="text-center">&bullet; SELECT A MODEL &bullet;</h1>
+</div>
+<div class="grid">
+    <div class="row">
+        <div class="col-xs-9 col-sm-4 col-md-4 col-lg-4">
+            <div class="txthover">
+                <img src="~/Resources/mercs_home.jpg" alt="car1">
+                <div class="txtcontent">
+                    <div class="stars">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                    <div class="simpletxt">
+                        <h3 class="name">MERC S-CLASS</h3>
+                        <p>
+                            Today's S-Class previews the future of driving. It can change lanes with a tap of your finger. Slow itself for a tollboth or exit.
+                        </p>
+                        <h4 class="price"> $126,300</h4>
+                        <button class="dropbtn1"> @Html.ActionLink("SELECT THIS CAR", "MERCS", "Reviews")</button>
+
+                    </div>
+                    <div class="stars2">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-9 col-sm-4 col-md-4 col-lg-4">
+            <div class="txthover">
+                <img src="~/Resources/mercc_home.jpg" alt="car1">
+                <div class="txtcontent">
+                    <div class="stars">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                    <div class="simpletxt">
+                        <h3 class="name">MERC C-CLASS</h3>
+                        <p>
+                            The C-Class wraps countless technological advances in even more seductive style for 2019. New lower body styling, wheel choices.
+                        </p>
+                        <h4 class="price"> $46,100</h4>
+                        <button class="dropbtn1"> @Html.ActionLink("SELECT THIS CAR", "MERCC", "Reviews")</button>
+
+                    </div>
+                    <div class="stars2">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-9 col-sm-4 col-md-4 col-lg-4">
+            <div class="txthover">
+                <img src="~/Resources/mercsls_home.jpg" alt="car1">
+
+                <div class="txtcontent">
+                    <div class="stars">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                    <div class="simpletxt">
+                        <h3 class="name">MERC SLS</h3>
+                        <p>
+                            The Mercedes-Benz SLS AMG is a front mid-engine, 2-seater, limited production sports car developed by the Mercedes-AMG division of German automotive manufacturer Mercedes-Benz.
+                        </p>
+                        <h4 class="price"> $634,900</h4>
+                        <button class="dropbtn1"> @Html.ActionLink("SELECT THIS CAR", "MERCSLS", "Reviews")</button>
+
+                    </div>
+                    <div class="stars2">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

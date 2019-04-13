@@ -1,0 +1,101 @@
+﻿@{
+    ViewBag.Title = "AUDI";
+}
+
+<!--  Welcome to audi page -->
+<div>
+    <!--  setting image -->
+    <img src="~/Resources/audi_home.jpg" style="width:100%">
+    <div class="text" id="text1">Welcome To AUDI Cars</div>
+</div>
+
+<!--  selecting a car section -->
+<div class="latestcars">
+    <h1 class="text-center">&bullet; SELECT A MODEL &bullet;</h1>
+</div>
+<div class="grid">
+    <div class="row">
+        <div class="col-xs-9 col-sm-4 col-md-4 col-lg-4">
+            <div class="txthover">
+                <img src="~/Resources/audir8_audihome.jpg" alt="car1">
+                <div class="txtcontent">
+                    <div class="stars">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                    <div class="simpletxt">
+                        <h3 class="name">AUDI R8</h3>
+                        <p>
+                            Deep within the factory at Neckarsulum, Germany, a small team of 241 dedicated specialists brings each unique R8 to life. Precision reigns supreme as these experts hand-measure and assemble the R8.
+                        </p>
+                        <h4 class="price"> $164,900</h4>
+                        <button class="dropbtn1"> @Html.ActionLink("SELECT THIS CAR", "AUDIR8", "Reviews")</button>
+
+                    </div>
+                    <div class="stars2">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-9 col-sm-4 col-md-4 col-lg-4">
+            <div class="txthover">
+                <img src="~/Resources/audia8_audihome.jpg" alt="car1">
+                <div class="txtcontent">
+                    <div class="stars">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                    <div class="simpletxt">
+                        <h3 class="name">AUDI A8</h3>
+                        <p>
+                            You never get a second chance at a first impression. The strong and elegant lines of the A8 L will ensure everyone knows you have arrived.
+                        </p>
+                        <h4 class="price"> $97,800</h4>
+                        <button class="dropbtn1"> @Html.ActionLink("SELECT THIS CAR", "AUDIA8", "Reviews")</button>
+
+                    </div>
+                    <div class="stars2">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-9 col-sm-4 col-md-4 col-lg-4">
+            <div class="txthover">
+                <img src="~/Resources/audiq8_audihome.jpg" alt="car1">
+
+                <div class="txtcontent">
+                    <div class="stars">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                    <div class="simpletxt">
+                        <h3 class="name">AUDI Q8</h3>
+                        <p>
+                            Born from a brand famous for iconic designs, the Q8 is instantly recognizable as an Audi, yet boldly creates its own unique identity.
+                        </p>
+                        <h4 class="price"> $88,800</h4>
+                        <button class="dropbtn1"> @Html.ActionLink("SELECT THIS CAR", "AUDIQ8", "Reviews")</button>
+
+                    </div>
+                    <div class="stars2">
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                        <div class="glyphicon glyphicon-star"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
