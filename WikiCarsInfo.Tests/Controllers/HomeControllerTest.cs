@@ -71,7 +71,11 @@ namespace WikiCarsInfo.Tests.Controllers
             HomeController controller = new HomeController();
 
             // Act
+<<<<<<< HEAD
             ViewResult result = controller.BMW() as ViewResult;
+=======
+            ViewResult result = controller.AUDI() as ViewResult;
+>>>>>>> master
 
             // Assert
             Assert.IsNotNull(result);
@@ -84,7 +88,11 @@ namespace WikiCarsInfo.Tests.Controllers
             HomeController controller = new HomeController();
 
             // Act
+<<<<<<< HEAD
             ViewResult result = controller.MERC() as ViewResult;
+=======
+            ViewResult result = controller.AUDI() as ViewResult;
+>>>>>>> master
 
             // Assert
             Assert.IsNotNull(result);

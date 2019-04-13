@@ -14,4 +14,7 @@ namespace WikiCarsInfo.Models
         public System.Data.Entity.DbSet<WikiCarsInfo.Models.FeedBack> FeedBacks { get; set; }
     }
 }
+<<<<<<< HEAD
     
+=======
+>>>>>>> master

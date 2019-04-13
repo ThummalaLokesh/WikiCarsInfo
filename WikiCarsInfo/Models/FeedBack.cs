@@ -9,8 +9,12 @@ namespace WikiCarsInfo.Models
 {
     public class FeedBack
     {
+<<<<<<< HEAD
         // feedback id is primary ke
         
+=======
+        // feedback id is primary key
+>>>>>>> master
         [Key]
         public virtual int FeedbackId { get; set; }
 

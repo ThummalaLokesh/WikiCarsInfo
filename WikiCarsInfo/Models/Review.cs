@@ -32,7 +32,11 @@ namespace WikiCarsInfo.Models
         [Required(ErrorMessage = "You must give Rating")]
         [DisplayName("Rating")]
         [Range(1, 5, ErrorMessage = "Rating must be 1 to 5")]
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> master
         public virtual int Rating { get; set; }
     }
 }
